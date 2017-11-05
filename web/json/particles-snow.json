@@ -13,7 +13,7 @@
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 1,
+        "width": 0,
         "color": "#9966FF"
       },
       "polygon": {
@@ -36,7 +36,7 @@
       }
     },
     "size": {
-      "value": 3,
+      "value": 5,
       "random": true,
       "anim": {
         "enable": false,
@@ -55,7 +55,7 @@
     "move": {
       "enable": true,
       "speed": 3,
-      "direction": "buttom",
+      "direction": "bottom",
       "random": false,
       "straight": false,
       "out_mode": "out",
@@ -70,12 +70,12 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "bubble"
       },
       "onclick": {
         "enable": true,
-        "mode": "bubble"
+        "mode": "push"
       },
       "resize": true
     },
@@ -97,7 +97,7 @@
         "distance": 200
       },
       "push": {
-        "particles_nb": 4
+        "particles_nb": 70
       },
       "remove": {
         "particles_nb": 2
