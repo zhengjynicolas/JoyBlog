@@ -3,7 +3,7 @@ window.onload = function() {
     function addListeners() {
         $("#naviBar").on('click', function(e) {
             var targetEl = e.target.parentNode;
-            if (targetEl.id != "mine") {
+            if (targetEl.id != "navi-right") {
                 if (!$(targetEl).hasClass("active")) {
                     $(targetEl).addClass("active");
                     clearSiblingsClass(targetEl, "active");
