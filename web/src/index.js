@@ -25,7 +25,7 @@ window.onload = function() {
     }
 
     function initEverything() {
-	    particlesJS.load('particles-js', 'json/particles-polygon.json', function() {
+	    particlesJS.load('particles-js', 'json/particles-snow.json', function() {
 	    	console.log("This is Joy's blog page.");
 	    });
         addListeners();

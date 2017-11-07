@@ -1,0 +1,14 @@
+.copyright{
+	padding: 10px;
+	background-color: #FFFFFF;
+	border-top: solid 1px #e7e7e7;
+	color: #777;
+}
+.copyright a{
+	color: #777;
+}
+.copyright a:hover,
+.copyright a:focus{
+	color: #5e5e5e;
+	text-decoration:none;
+}
