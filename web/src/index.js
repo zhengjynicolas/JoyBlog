@@ -5,7 +5,7 @@ window.onload = function() {
 
     function initGlobalVars() {
         bgColorIdx = 0;
-        colorList = ['#FF4040', '#FF9840', '#FFF273', '#74E868', '#36BBCE', '#514ED9', '#8E41D5'];
+        colorList = ['#FF4040', '#FF9840', '#FFBF40', '#218555', '#36BBCE', '#514ED9', '#8E41D5'];
     }
 
     function initParticles() {
@@ -75,6 +75,7 @@ window.onload = function() {
         addListeners();
         initBgAnimation();
         // initMainContent();
+        
     }
 
     if (!this.Initial) {
