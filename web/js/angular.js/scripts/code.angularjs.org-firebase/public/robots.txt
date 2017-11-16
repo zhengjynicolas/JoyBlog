@@ -1,5 +1,0 @@
-User-agent: *
-
-Disallow: /*docs/
-Disallow: /*i18n/
-Disallow: /*.zip$
