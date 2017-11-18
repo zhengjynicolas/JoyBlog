@@ -1,11 +1,19 @@
-var Initial = false;
 window.onload = function() {
-    var bgColorIdx;
-    var colorList;
+    var picList;
 
     function initGlobalVars() {
-        bgColorIdx = 0;
-        colorList = ['#FF4040', '#FF9840', '#FFBF40', '#218555', '#36BBCE', '#514ED9', '#8E41D5'];
+        picList = [
+            'bg_cc.jpg',
+            'bg_cc_lulu.jpg',
+            'bg_sesyoumaru.jpg', 
+            'bg_fuuma_kamui.jpg', 
+            'bg_lulu.jpg', 
+            'bg_suzaku.jpg',
+            'bg_384.jpg',
+            'bg_suzaku.jpg',
+            'bg_sieru_384.jpg',
+            'bg_black_saber.jpg'
+        ];
     }
 
     function initParticles() {
@@ -13,73 +21,20 @@ window.onload = function() {
             console.log("This is Joy's blog page.");
         });
     }
-    function initNavClickEvent(){
-        $("#naviBar").click(function(e){
-            var targetEl = e.target.parentNode;
-            if (targetEl.id != "navi-right") {
-                if (!$(targetEl).hasClass("active")) {
-                    $(targetEl).addClass("active");
-                    clearSiblingsClass(targetEl, "active");
-                }
-                // loadMainContent(targetEl);
-            }
-        });
-        var clearSiblingsClass = function(el, cls) {
-            var siblings = el.parentNode.children;
-            for (var i = 0; i < siblings.length; i++) {
-                if (el.id === siblings[i].id) {
-                    continue;
-                }
-                if ($(siblings[i]).hasClass(cls)) {
-                    $(siblings[i]).removeClass(cls);
-                }
-            }
+
+    function initBgRandomPic() {
+        var bgPic = picList[Math.floor(10*Math.random())];
+        if(bgPic === undefined || bgPic === null || bgPic === ''){
+            bgPic = 'bg_default.jpg';
         }
-    }
-
-    function initNavScrollEvent() {
-        var win = $(window);
-        win.scroll(function(){
-            var css = {};
-            var navBar = $("#naviBar");
-            if(win.scrollTop() > 0){
-                navBar.css({"background-color" : "#f8f8f8"});
-            }else{
-                navBar.css({"background-color" : "transparent"});
-            }
-            
-        });
-    }
-
-    function addListeners() {
-        initNavClickEvent();
-        initNavScrollEvent();
-
-    }
-
-    function initBgAnimation(css) {
-        css = {};
-        if (bgColorIdx >= colorList.length) {
-            bgColorIdx = 0;
-        }
-        css.backgroundColor = colorList[bgColorIdx];
-        bgColorIdx++;
-        setTimeout(function(){
-            $("#particles-js").animate(css, 5000, initBgAnimation(css));
-        },10000);
+        $("body").css({"background-image": "url(/img/" + bgPic + ")"});
     }
 
     function initEverything() {
         initGlobalVars();
         initParticles();
-        addListeners();
-        initBgAnimation();
-        // initMainContent();
-        
+        initBgRandomPic();
     }
+    initEverything();
 
-    if (!this.Initial) {
-        initEverything();
-        this.Initial = false;
-    }
 }
