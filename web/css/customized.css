@@ -63,7 +63,7 @@ canvas {
     text-decoration: none;
 }
 
-.center-fix{
+.center-fix {
     position: relative;
     top: 20%;
     max-width: 600px;
@@ -71,18 +71,21 @@ canvas {
     z-index: 99;
     text-align: center;
 }
-.opacity-warp{
-	border-radius: 50%;
-	box-shadow: 0 10px 10px 10px;
-	color: #000;
-	background-color: #000;
-	opacity: 0.7;
-	margin-bottom: 40px;
+
+.opacity-warp {
+    border-radius: 50%;
+    box-shadow: 0 10px 10px 10px;
+    color: #000;
+    background-color: #000;
+    opacity: 0.7;
+    margin-bottom: 40px;
 }
-.center-fix h1,h2{
-	font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
-	font-size: 8em;
-	color: #fff;
+
+.center-fix h1,
+.center-fix h2 {
+    font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+    font-size: 8em;
+    color: #fff;
 }
 
 .my-ico {
@@ -91,19 +94,21 @@ canvas {
 }
 
 .circle {
-	border-radius: 100%;
-	box-shadow: 0 0 10px 0;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 0;
 }
 
 .circle-border-brown {
-    border: solid 5px rgba(255,223,64,0.4);
+    border: solid 5px rgba(255, 223, 64, 0.4);
 }
 
 #main-container {
     background-color: #AD66D5;
 }
 
+
 /* HOVER EFFECTS */
+
 .evenflow_rotate {
     transition: transform 0.25s ease;
 }
