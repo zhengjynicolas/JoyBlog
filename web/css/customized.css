@@ -50,6 +50,7 @@ canvas {
     background-color: #FFFFFF;
     border-top: solid 1px #e7e7e7;
     color: #777;
+    text-align: center !important;
 }
 
 .copyright a {
@@ -62,11 +63,26 @@ canvas {
     text-decoration: none;
 }
 
-.center-fix {
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    z-index: 1000;
+.center-fix{
+    position: relative;
+    top: 20%;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 99;
+    text-align: center;
+}
+.opacity-warp{
+	border-radius: 50%;
+	box-shadow: 0 10px 10px 10px;
+	color: #000;
+	background-color: #000;
+	opacity: 0.7;
+	margin-bottom: 40px;
+}
+.center-fix h1,h2{
+	font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+	font-size: 8em;
+	color: #fff;
 }
 
 .my-ico {
@@ -80,16 +96,14 @@ canvas {
 }
 
 .circle-border-brown {
-    border: solid 5px brown;
+    border: solid 5px rgba(255,223,64,0.4);
 }
 
 #main-container {
     background-color: #AD66D5;
 }
 
-
 /* HOVER EFFECTS */
-
 .evenflow_rotate {
     transition: transform 0.25s ease;
 }
