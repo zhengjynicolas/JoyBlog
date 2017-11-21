@@ -1,55 +1,48 @@
-var Initial = false;
 window.onload = function() {
     var bgColorIdx;
     var colorList;
+    var toTop;
+    var navBar;
+    var win;
 
     function initGlobalVars() {
         bgColorIdx = 0;
         colorList = ['#FF4040', '#FF9840', '#FFBF40', '#218555', '#36BBCE', '#514ED9', '#8E41D5'];
+        toTop = $(".back-to-top");
+        navBar = $("#naviBar");
+        win = $(window);
     }
 
-    function initNavClickEvent(){
-        $("#naviBar").click(function(e){
-            var targetEl = e.target.parentNode;
-            if (targetEl.id != "navi-right") {
-                if (!$(targetEl).hasClass("active")) {
-                    $(targetEl).addClass("active");
-                    clearSiblingsClass(targetEl, "active");
-                }
-                // loadMainContent(targetEl);
+    function initDefaultStatus(){
+        win.ready(function() {
+            if(win.scrollTop() === 0){
+                toTop.hide();
+                // navBar.css({"background-color" : "transparent"});
+            }else{
+                // navBar.css({"background-color" : "#f8f8f8"});
             }
         });
-        var clearSiblingsClass = function(el, cls) {
-            var siblings = el.parentNode.children;
-            for (var i = 0; i < siblings.length; i++) {
-                if (el.id === siblings[i].id) {
-                    continue;
-                }
-                if ($(siblings[i]).hasClass(cls)) {
-                    $(siblings[i]).removeClass(cls);
-                }
-            }
-        }
     }
 
     function initNavScrollEvent() {
-        var win = $(window);
         win.scroll(function(){
             var css = {};
-            var navBar = $("#naviBar");
             if(win.scrollTop() > 0){
-                navBar.css({"background-color" : "#f8f8f8"});
+                // navBar.css({"background-color" : "#f8f8f8"}); 
+                toTop.fadeIn();
             }else{
-                navBar.css({"background-color" : "transparent"});
+                // navBar.css({"background-color" : "transparent"});
+                toTop.fadeOut();
             }
-            
+        });
+        toTop.click(function() {
+            $("body,html").animate({ scrollTop: 0 }, 500);
         });
     }
 
     function addListeners() {
-        initNavClickEvent();
+        // initNavClickEvent();
         initNavScrollEvent();
-
     }
 
     function initBgAnimation(css) {
@@ -66,14 +59,10 @@ window.onload = function() {
 
     function initEverything() {
         initGlobalVars();
+        initDefaultStatus();
         addListeners();
-        initBgAnimation({});
-        // initMainContent();
-        
+        initBgAnimation({});   
     }
 
-    if (!this.Initial) {
-        initEverything();
-        this.Initial = false;
-    }
+    initEverything();
 }

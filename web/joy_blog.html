@@ -26,13 +26,38 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navi-items">
                     <ul class="nav navbar-nav">
-                        <li id="home" class="active"><a class="glyphicon glyphicon-home" href="#myInfo">Resume</a></li>
-                        <li id="king"><a class="glyphicon glyphicon-king" href="#qualification">KING</a></li>
-                        <li id="queen"><a class="glyphicon glyphicon-queen" href="#workExp">QUEEN</a></li>
+                        <li id="home" class="dropdown">
+                            <a class="glyphicon glyphicon-book dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Resume</a>
+                            <ul class="dropdown-menu" aria-labelledby="home">
+                                <li><a href="#myInfo">个人信息</a></li>
+                                <li><a href="#workExp">工作经历</a></li>
+                                <li><a href="#pjExp">项目经历</a></li>
+                                <li><a href="#identification">资格证书</a></li>
+                            </ul>
+                        </li>
+                        <li id="favor" class="dropdown">
+                            <a class="glyphicon glyphicon-heart dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Favorite</a>
+                            <ul class="dropdown-menu" aria-labelledby="favor">
+                                <li><a href="http://api.jquery.com/" target="_blank">JQuery</a></li>
+                                <li><a href="http://v3.bootcss.com/" target="_blank">Bootstrap</a></li>
+                                <li><a href="https://cn.vuejs.org/" target="_blank">Vue</a></li>
+                                <li><a href="https://angularjs.org/" target="_blank">Angular</a></li>
+                                <li><a href="https://nodejs.org/en/docs/" target="_blank">NodeJS</a></li>
+                                <li><a href="https://www.sencha.com/products/extjs/" target="_blank">ExtJS</a></li>
+                                <li class="divider" role="seperator"></li>
+                                <li><a href="https://www.hcharts.cn/" target="_blank">HighCharts</a></li>
+                                <li><a href="http://echarts.baidu.com/" target="_blank">ECharts</a></li>
+                                <li><a href="https://d3js.org/" target="_blank">D3.js</a></li>
+                                <li class="divider" role="seperator"></li>
+                                <li><a href="https://www.quanzhanketang.com/" target="_blank">w3school.com</a></li>
+                                <li><a href="http://www.gruntjs.net/" target="_blank">Grunt</a></li>
+                            </ul>
+                        </li>
+                        <li id="queen"><a class="glyphicon glyphicon-queen" href="javascript:;">QUEEN</a></li>
                         <li id="github"><a class="glyphicon glyphicon-cloud" href="https://github.com/zhengjynicolas">GITHUB</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li id="navi-right"><a class="glyphicon glyphicon-envelope" href="javascript:;">Contact Me</a></li>
+                        <li id="navi-right"><a class="glyphicon glyphicon-envelope" href="mailto:442114687@qq.com">Contact Me</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -108,6 +133,7 @@
             <div>精通日语，出于兴趣曾经参加过网络字幕组（异域字幕组）的听译工作，目前达到可在业务上沟通水平。</div>
         </div>
     </div>
+    <div class="back-to-top"><span></span></div>
     <footer class="main-footer">
         <div class="copyright">
             <div class="container-fluid">
