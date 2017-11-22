@@ -29,7 +29,7 @@
                         <li id="home" class="dropdown">
                             <a class="glyphicon glyphicon-book dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Resume</a>
                             <ul class="dropdown-menu" aria-labelledby="home">
-                                <li><a href="#myInfo">个人信息</a></li>
+                                <li><a href="#education">教育背景</a></li>
                                 <li><a href="#workExp">工作经历</a></li>
                                 <li><a href="#pjExp">项目经历</a></li>
                                 <li><a href="#identification">资格证书</a></li>
@@ -63,74 +63,16 @@
                 <!-- /.navbar-collapse -->
             </div>
         </nav>
-        <div id="content" class="doc-section" data-offset="0" data-target="#navBar" data-spy="scroll">
-            <h1 id="myInfo">我的个人信息</h1>
-            <h2>姓名</h2>
-            <div>JOY ZHENG</div>
-            <h2>性别</h2>
-            <div>女</div>
-            <h2>Email</h2>
-            <div>442114687@qq.com</div>
-            <h2>Tel</h2>
-            <div>(86)13146806972</div>
-            <h1 id="qualification">自我评价</h1>
-            <div>性格温和，团队合作能力强。长期在日本企业工作，培养了认真谨慎的工作习惯。踏实、自学能力强，成长迅速，获得领导认同，并被提升为项目组sub-leader。之后显露出良好的领导和管理能力，受到领导认同。由于出色的工作表现，在现公司获得员工贡献奖。对编程知识有浓厚兴趣，追求代码的简洁和逻辑的清晰，愿意不断为技术的提升而努力。</div>
-            <h1 id="workExp">工作经历</h1>
-            <h2>2012.06-至今  日电卓越软件科技(北京)有限公司</h2>
-            <div>职务：软件工程师P4</div>
-            <div>项目：LCT（iPASOLINK）、TRSN</div>
-            <div>职责：</div>
-            <div> 系统软件开发  参与日本无线网络硬件设备（iPASOLINK系列硬件设备）的配套软件开发。完成软件开发流程中各阶段的开发工作（详细设计、编写代码、单元测试设计&测试、集成测试设计&测试）。  对已有系统模块进行维护、通过对页面性能的优化提升用户体验。  对系统功能开发中新型模块中的技术问题进行调研，提供详细解决方案。  负责软件流程中各阶段的工作成果物检查（代码、设计文档、测试文档等）。  对软件开发流程中产生的开发规模/BUG率/工作进度等数据进行统计及汇报。  新人管理教育  在系统业务/技术/日语等方面对新人进行教育指导。  为所负责人员分配每日任务并跟进任务完成度。  其他  负责与日本客户的日常（电话、邮件）联络&沟通。
-            </div>
-            <h2>2011.09-2012.05  北京天公瑞丰科技有限公司</h2>
-            <div>职务：初级软件工程师</div>
-            <div>项目：日本医疗数据分析系统（健助）</div>
-            <div>职责：</div>
-            <div> 系统软件开发  参与日本医疗数据中心分析系统的开发。完成软件开发流程中部分阶段的开发工作（编写代码、单元测试设计&测试、集成测试设计&测试）。  其他  负责与日本客户的日常（电话、邮件）联络。  担任组内部分日文工作资料的翻译工作
-            </div>
-            <h2>2010.11-2011.8  北京辉天盛世科技有限公司</h2>
-            <div>职务：网站编辑（兼职）</div>
-            <div>职责：</div>
-            <div> 日常发布  撰写网游方面相关新闻并发布于网站首页。  挑选游戏论坛中精华文章、并转载到相关专题页面。  专题制作  完成以网游《魔兽世界》为主题的大型专题网站制作工作。
-            </div>
-            <h1 id="pjExp">项目经历</h1>
-            <h2>LCT（iPASOLINK）</h2>
+        <div id="myInfo" class="doc-floater">
             <ul>
-                <li>程序语言：JavaScript、C</li>
-                <li>相关技术：ExtJS、JQuery、JSON、HTML、CSS、CGI、AJAX</li>
-                <li>开发环境：windows 7（32bit/64bit）、Linux、IE 8/9/10/11、FireFox</li>
-                <li>开发工具：eclipse、CVS、VSS、Apache</li>
-                <li>软件描述：基于日本NEC公司网络通讯产品iPASOLINK系列，微波通讯设备的嵌入式软件开发。 前端为利用js、html、css以及ExtJs框架开发的web页面，后端为利用C语言开发的CGI程序，依靠Ajax 等数据传输技术使前端web页面与后端CGI程序进行通信，将硬件数据以严格的表示形式，准确展现给用 户。一般级用户可以对硬件设备的参数进行实时监控，管理员级用户还可以对硬件参数进行设置。
-                </li>
-                <li>项目业绩：2015年被提升为组内SL（sub-leader） | 2016年度下半期事业部贡献奖</li>
+                <li><img class="my-ico circle circle-border-brown evenflow_spin" src="/img/my_ico_384.jpg" alt="my_ico.jpg"></li>
+                <li>{{name}}</li>
+                <li><span class="glyphicon glyphicon-envelope"></span> {{email}}</li>
+                <li><span class="glyphicon glyphicon-earphone"></span> {{tel}}</li>
             </ul>
-            <h2>TRSN教学资源分享网站</h2>
-            <ul>
-                <li>程序语言：Java</li>
-                <li>相关技术：Structs、Sevlet、JSP</li>
-                <li>开发环境：windows xp、IE</li>
-                <li>开发工具：Eclipse、MySQL</li>
-                <li>软件描述：基于Web平台B/S结构的网络教学资源分享系统的开发，面对校园用户，使用户可以在网站上进行资源的分享（资源上传、下载）、论坛讨论，并具备必要的管理员功能。</li>
-            </ul>
-            <h2>日本医疗数据分析系统（健助）</h2>
-            <ul>
-                <li>程序语言：ActionScript3.0、C#</li>
-                <li>相关技术：XML、HTML、CSS、SQL</li>
-                <li>开发环境：windows xp、IE、FireFox</li>
-                <li>开发工具：Visual Studio 2010、eclipse、Netezza、SVN 、VSS</li>
-                <li>软件描述：基于Web平台B/S结构的日本医疗数据中心分析系统的开发，前端为用ActionScript3.0实现的web页面， 通过C#开发后端与数据库进行通信。用户可通过前端web页面，输入数据检索条件， 后端根据检索条件 生成SQL语句在数据库中进行查询后进行分析，并将分析结果数据返回给web页面，最终以表格的形式呈 现给用户。系统提供友好的用户界面，复杂的数据处理能力，使数据分析得出的结果精确可靠，具有较好的 参考价值。
-                </li>
-                <li>项目业绩：2011年下半年度优秀员工奖</li>
-            </ul>
-            <h1 id="identification">资格证书</h1>
-            <ol>
-                <li>UMTP L1认证</li>
-                <li>日语N1</li>
-                <li>英语CET-6</li>
-            </ol>
-            <h1 id="other">其他</h1>
-            <div>良好的英语听说读写能力，可以在开发工作中自由运用。</div>
-            <div>精通日语，出于兴趣曾经参加过网络字幕组（异域字幕组）的听译工作，目前达到可在业务上沟通水平。</div>
+        </div>
+        <div id="resume" class="doc-section">
+
         </div>
     </div>
     <div class="back-to-top"><span></span></div>

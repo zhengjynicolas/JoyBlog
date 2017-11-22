@@ -56,12 +56,28 @@ window.onload = function() {
             $("#main-container").animate(css, 5000, initBgAnimation(css));
         },10000);
     }
+    function loadJsonData(url) {
+        return ($.ajax({
+            type: "GET",
+            url: url,
+            dataType:"json",
+            async: false
+        }).responseJSON);
+    }
+
+    function setDataById(id, json){
+        var vue = new Vue({
+            el: "#"+id,
+            data: json[id].data
+        });
+    }
 
     function initEverything() {
         initGlobalVars();
         initDefaultStatus();
         addListeners();
-        initBgAnimation({});   
+        initBgAnimation({});
+        setDataById("myInfo",loadJsonData("/json/resume_info.json"));   
     }
 
     initEverything();

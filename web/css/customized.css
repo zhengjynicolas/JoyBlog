@@ -18,7 +18,25 @@ canvas {
   width: 100%;
   height: 100%
 }
-
+.doc-floater {
+  position: fixed;
+  float: left;
+  left: 20px;
+  top: 200px;
+  text-align: center;
+  height: 300px;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #FFF;
+  border-radius: 25%;
+}
+.doc-floater ul {
+  margin: 0;
+  padding: 20px 0 0 0;
+  display: block;
+  list-style-type: none;
+  line-height: 50px;
+}
 .doc-section {
   margin: 0 auto;
   padding: 50px 0;
