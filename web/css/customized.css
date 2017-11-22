@@ -20,7 +20,6 @@ canvas {
 }
 .doc-floater {
   position: fixed;
-  z-index: 9999;
   left: 20px;
   top: 20%;
   text-align: center;
