@@ -20,9 +20,9 @@ canvas {
 }
 .doc-floater {
   position: fixed;
-  float: left;
+  z-index: 9999;
   left: 20px;
-  top: 200px;
+  top: 20%;
   text-align: center;
   height: 300px;
   width: 200px;
