@@ -6,13 +6,26 @@ window.onload = function() {
     var win;
     var jsonData;
 
+    function makeJsonData(json){
+        $.each(json,function(propName, value){
+            return new Vue({
+                el: "#" + propName,
+                data: value
+            });
+        });
+    }
+
     function loadJsonData(url) {
-        return $.ajax({
+        $.ajax({
             type: "GET",
             url: url,
             dataType:"json",
-            async: false
-        }).responseJSON;
+            async: true,
+            success: function(response){
+                jsonData = response;
+                makeJsonData(jsonData);
+            }
+        });
     }
 
     function initGlobalVars() {
@@ -21,16 +34,13 @@ window.onload = function() {
         toTop = $(".back-to-top");
         navBar = $("#naviBar");
         win = $(window);
-        jsonData = loadJsonData("/json/resume_info.json");
+        loadJsonData("/json/resume_info.json");
     }
 
     function initDefaultStatus(){
         win.ready(function() {
             if(win.scrollTop() === 0){
                 toTop.hide();
-                // navBar.css({"background-color" : "transparent"});
-            }else{
-                // navBar.css({"background-color" : "#f8f8f8"});
             }
         });
     }
@@ -39,10 +49,8 @@ window.onload = function() {
         win.scroll(function(){
             var css = {};
             if(win.scrollTop() > 0){
-                // navBar.css({"background-color" : "#f8f8f8"}); 
                 toTop.fadeIn();
             }else{
-                // navBar.css({"background-color" : "transparent"});
                 toTop.fadeOut();
             }
         });
@@ -52,7 +60,6 @@ window.onload = function() {
     }
 
     function addListeners() {
-        // initNavClickEvent();
         initNavScrollEvent();
     }
 
@@ -68,19 +75,8 @@ window.onload = function() {
         },10000);
     }
 
-
-    function makeJsonData(json){
-        $.each(json,function(propName, value){
-            return new Vue({
-                el: "#" + propName,
-                data: value
-            });
-        });
-    }
-
     function initEverything() {
         initGlobalVars();
-        makeJsonData(jsonData); 
         initDefaultStatus();
         addListeners();
         initBgAnimation({});
