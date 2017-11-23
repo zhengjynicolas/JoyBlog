@@ -31,7 +31,7 @@
                             <ul class="dropdown-menu" aria-labelledby="home">
                                 <li><a href="#education">教育背景</a></li>
                                 <li><a href="#workExp">工作经历</a></li>
-                                <li><a href="#pjExp">项目经历</a></li>
+                                <li><a href="#pjExp">项目经验</a></li>
                                 <li><a href="#identification">资格证书</a></li>
                             </ul>
                         </li>
@@ -71,11 +71,49 @@
                 <li><span class="glyphicon glyphicon-earphone"></span> {{tel}}</li>
             </ul>
         </div>
-        <div id="resume" class="doc-section">
+        <div id="resumeInfo" class="doc-section">
+            <section id="education">
+                <h1>{{title}}</h1>
+                <h2>{{university}} | {{dep}} | {{cate}}</h2>
+            </section>
+            <section id="workExp">
+                <h1>{{title}}</h1>
+                <div v-for="data in datas">
+                    <h2>{{data.start}} ~ {{data.end}}  {{data.corp}}</h2>
+                    <p>职务：{{data.title}}</p>
+                    <p>项目：{{data.project}}</p>
+                    <p>职责：</p>
+                </div>
+            </section>
+            <section id="pjExp">
+                <h1>{{title}}</h1>
+                <div v-for="data in datas">
+                    <h2>{{data.name}}</h2>
+                    <ul>
+                        <li>程序语言：{{data.lang}}</li>
+                        <li>相关技术：{{data.tech}}</li>
+                        <li>开发环境：{{data.env}}</li>
+                        <li>开发工具：{{data.soft}}</li>
+                        <li>软件描述：{{data.desc}}</li>
+                        <li v-if="data.rewards !== undefined">项目业绩：{{data.rewards}}</li>
+                    </ul>
+
+                </div>
+            </section>
+            <section id="identification">
+                <h1>{{title}}</h1>
+                <ol>
+                    <li v-for="data in datas">{{data}}</li>
+                </ol>
+            </section>
+            <section id="addition">
+                <h1>{{title}}</h1>
+                <p v-for="data in datas">{{data}}</p>
+            </section>
 
         </div>
     </div>
-    <div class="back-to-top"><span></span></div>
+    <button class="back-to-top"><span></span></button>
     <footer class="main-footer">
         <div class="copyright">
             <div class="container-fluid">

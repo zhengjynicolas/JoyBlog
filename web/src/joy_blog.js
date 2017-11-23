@@ -4,6 +4,16 @@ window.onload = function() {
     var toTop;
     var navBar;
     var win;
+    var jsonData;
+
+    function loadJsonData(url) {
+        return $.ajax({
+            type: "GET",
+            url: url,
+            dataType:"json",
+            async: false
+        }).responseJSON;
+    }
 
     function initGlobalVars() {
         bgColorIdx = 0;
@@ -11,6 +21,7 @@ window.onload = function() {
         toTop = $(".back-to-top");
         navBar = $("#naviBar");
         win = $(window);
+        jsonData = loadJsonData("/json/resume_info.json");
     }
 
     function initDefaultStatus(){
@@ -53,31 +64,26 @@ window.onload = function() {
         css.backgroundColor = colorList[bgColorIdx];
         bgColorIdx++;
         setTimeout(function(){
-            $("#main-container").animate(css, 5000, initBgAnimation(css));
+            $(".doc-floater").animate(css, 5000, initBgAnimation(css));
         },10000);
     }
-    function loadJsonData(url) {
-        return ($.ajax({
-            type: "GET",
-            url: url,
-            dataType:"json",
-            async: false
-        }).responseJSON);
-    }
 
-    function setDataById(id, json){
-        var vue = new Vue({
-            el: "#"+id,
-            data: json[id].data
+
+    function makeJsonData(json){
+        $.each(json,function(propName, value){
+            return new Vue({
+                el: "#" + propName,
+                data: value
+            });
         });
     }
 
     function initEverything() {
         initGlobalVars();
+        makeJsonData(jsonData); 
         initDefaultStatus();
         addListeners();
         initBgAnimation({});
-        setDataById("myInfo",loadJsonData("/json/resume_info.json"));   
     }
 
     initEverything();
