@@ -63,7 +63,7 @@ window.onload = function() {
         initNavScrollEvent();
     }
 
-    function initBgAnimation(css) {
+    function initColorChangeAnimation(css) {
         css = {};
         if (bgColorIdx >= colorList.length) {
             bgColorIdx = 0;
@@ -71,15 +71,31 @@ window.onload = function() {
         css.backgroundColor = colorList[bgColorIdx];
         bgColorIdx++;
         setTimeout(function(){
-            $(".doc-floater").animate(css, 5000, initBgAnimation(css));
+            $(".doc-floater").animate(css, 5000, initColorChangeAnimation(css));
         },10000);
+    }
+    function initBgPics(){
+       var picList = [
+            'bg_cc.jpg',
+            'bg_cc_lulu.jpg',
+            'bg_sesyoumaru.jpg', 
+            'bg_fuuma_kamui.jpg', 
+            'bg_lulu.jpg', 
+            'bg_suzaku.jpg',
+            'bg_384.jpg',
+            'bg_suzaku.jpg',
+            'bg_sieru_384.jpg',
+            'bg_black_saber.jpg'
+        ];
+        randomPicLoader.init(picList, $("body"));
     }
 
     function initEverything() {
         initGlobalVars();
         initDefaultStatus();
         addListeners();
-        initBgAnimation({});
+        initColorChangeAnimation({});
+        initBgPics();
     }
 
     initEverything();

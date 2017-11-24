@@ -1,5 +1,7 @@
 body {
   position: relative;
+  background: no-repeat;
+  background-size: cover;
   /* font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; */
 }
 
@@ -10,14 +12,14 @@ canvas {
   left: 0;
 }
 
+#main-container{
+  background-color: #fff;
+  opacity: 0.8;
+}
 /* #naviBar {
   background-color: transparent;
 } */
 
-.bg-container {
-  width: 100%;
-  height: 100%
-}
 .doc-floater {
   position: fixed;
   left: 20px;
@@ -29,6 +31,9 @@ canvas {
   color: #ddd;
   border-radius: 25%;
 }
+.doc-floater:hover {
+  box-shadow: 10px 10px 10px 5px #888;
+}
 .doc-floater ul {
   margin: 0;
   padding: 20px 0 0 0;
@@ -36,13 +41,21 @@ canvas {
   list-style-type: none;
   line-height: 50px;
 }
+.content-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100%;
+}
 .doc-section {
+  border: solid 2px #999;
+  border-radius: 30px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 30px;
   z-index: 1;
   width: 70%;
   height: 100%;
   color: #000;
+  box-shadow: 10px 10px 10px 10px #888888;
   background: transparent;
 }
 
