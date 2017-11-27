@@ -15,8 +15,10 @@ window.onload = function() {
             'bg_suzaku.jpg',
             'bg_384.jpg',
             'bg_suzaku.jpg',
-            'bg_sieru_384.jpg',
-            'bg_black_saber.jpg'
+            'bg_rei_archer.jpg',
+            'bg_black_saber.jpg',
+            'bg_final_fantacy.jpg',
+            ''
         ];
         randomPicLoader.init(picList, $("body"));
     }

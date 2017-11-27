@@ -82,8 +82,19 @@
                     <div v-for="data in datas">
                         <h2>{{data.start}} ~ {{data.end}}  {{data.corp}}</h2>
                         <p>职务：{{data.title}}</p>
-                        <p>项目：{{data.project}}</p>
-                        <p>职责：</p>
+                        <p v-if="data.project !== undefined">项目：{{data.project}}</p>
+                        <p>职责：
+                            <div>
+                                <ul>
+                                    <li v-for="resp in data.response">{{resp.headline}}
+                                        <ol>
+                                            <li v-for="dtl in resp.detail">{{dtl}}</li>
+                                        </ol>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </p>
                     </div>
                 </section>
                 <section id="pjExp">
@@ -114,7 +125,7 @@
             </div>
 
         </div>
-        <button class="back-to-top"><span></span></button>
+        <button class="back-to-top evenflow_shake"><span></span></button>
     </div>
     <footer class="main-footer">
         <div class="copyright">

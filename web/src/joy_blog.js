@@ -84,8 +84,10 @@ window.onload = function() {
             'bg_suzaku.jpg',
             'bg_384.jpg',
             'bg_suzaku.jpg',
-            'bg_sieru_384.jpg',
-            'bg_black_saber.jpg'
+            'bg_aoba.jpg',
+            'bg_black_saber.jpg',
+            'bg_quanzhi.jpg',
+            ''
         ];
         randomPicLoader.init(picList, $("body"));
     }
