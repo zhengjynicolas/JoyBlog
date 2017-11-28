@@ -20,7 +20,7 @@ window.onload = function() {
             'bg_final_fantacy.jpg',
             ''
         ];
-        this.commonModules.randomPicLoader(picList, $("body"));
+        Modules.randomPicLoader(picList, $("body"));
     }
 
     function initEverything() {

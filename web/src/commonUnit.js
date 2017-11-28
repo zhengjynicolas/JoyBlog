@@ -15,7 +15,7 @@
     
 // } deprecated
 
-var commonModules = {
+Modules = {
 	randomPicLoader : function(picList, jqObj){
         var bgPic = picList[Math.floor(picList.length * Math.random())];
         if (bgPic === undefined || bgPic === null || bgPic === '') {
