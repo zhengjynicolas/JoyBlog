@@ -159,7 +159,7 @@ canvas {
 }
 .back-to-top {
   position: fixed;
-  z-index: 9999;
+  z-index: 2;
   right: 50px;
   bottom: 100px;
   width: 50px;
@@ -169,7 +169,7 @@ canvas {
   border: solid 2px #000;
   border-radius: 100%;
 }
-.back-to-top span{
+.back-to-top span {
   position: absolute;
   top: 15px;
   left: 13px;
@@ -182,6 +182,11 @@ canvas {
 }
 .back-to-top:hover {
   cursor: pointer;
+  background-color: #000;
+}
+.back-to-top:hover>span{
+  border-top-color: #fff;
+  border-right-color: #fff;
 }
 
 .forkme {
