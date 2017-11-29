@@ -89,7 +89,7 @@ window.onload = function() {
             'bg_quanzhi.jpg',
             ''
         ];
-        Modules.randomPicLoader(picList, $("body"));
+        CustomizeUtil.randomPicLoader(picList, $("body"));
     }
 
     function initEverything() {
