@@ -1,4 +1,4 @@
-window.onload = function() {
+(function() {
     var bgColorIdx;
     var colorList;
     var toTop;
@@ -101,4 +101,4 @@ window.onload = function() {
     }
 
     initEverything();
-}
+})();

@@ -1,4 +1,4 @@
-window.onload = function() {
+(function() {
 
     function initParticles() {
         particlesJS.load('particles-js', 'json/particles-polygon.json', function() {
@@ -29,4 +29,4 @@ window.onload = function() {
     }
     initEverything();
 
-}
+})();
