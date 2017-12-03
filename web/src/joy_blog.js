@@ -59,8 +59,20 @@
         });
     }
 
+    function initSearchActivity(){
+        $("#search-form button").click(function(){
+            var searchInput = $("#search-form input");
+            var searchVal = searchInput.val();
+            if(searchVal === null || searchVal === undefined || searchVal.length === 0){
+                return;
+            }
+            window.open("http://cn.bing.com/search?q=" + searchVal, "_top");
+        });
+    }
+
     function addListeners() {
         initNavScrollEvent();
+        initSearchActivity();
     }
 
     function initColorChangeAnimation(css) {

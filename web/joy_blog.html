@@ -44,51 +44,35 @@
                             <ul class="dropdown-menu" aria-labelledby="favor">
                                 <li class="dropdown-submenu" aria-labelledby="tutorials">
                                     <a href="javascript:;">Tutorials</a>
-                                    <ul class="dropdown-menu" aria-labelledby="Official">
-                                        <li class="dropdown-submenu">  
-                                        <a href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Official Sites</a>
-                                        <ul class="dropdown-menu"> 
-                                            <li><a href="http://api.jquery.com/" target="_blank">JQuery</a></li>
-                                            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-                                            <li><a href="https://cn.vuejs.org/" target="_blank">Vue</a></li>
-                                            <li><a href="https://angularjs.org/" target="_blank">Angular</a></li>
-                                            <li><a href="https://nodejs.org/en/docs/" target="_blank">NodeJS</a></li>
-                                            <li><a href="https://www.sencha.com/products/extjs/" target="_blank">ExtJS</a></li>
-                                        </ul>
-                                        </li>
+                                    <ul class="dropdown-menu"> 
+                                        <li><a href="http://api.jquery.com/" target="_blank">JQuery</a></li>
+                                        <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+                                        <li><a href="https://cn.vuejs.org/" target="_blank">Vue</a></li>
+                                        <li><a href="https://angularjs.org/" target="_blank">Angular</a></li>
+                                        <li><a href="https://nodejs.org/en/docs/" target="_blank">NodeJS</a></li>
+                                        <li><a href="https://www.sencha.com/products/extjs/" target="_blank">ExtJS</a></li>
                                         <li class="divider" role="seperator"></li>
                                         <li><a href="https://www.quanzhanketang.com/" target="_blank">w3school.com</a></li>
                                         <li><a href="http://www.gruntjs.net/" target="_blank">Grunt</a></li>
                                     </ul>
                                 </li>  
-                                <li class="dropdown-submenu">
+                                <li class="dropdown-submenu" aria-labelledby="plugins">
                                     <a href="javascript:;">Plugins</a>
-                                    <ul class="dropdown-menu" aria-labelledby="plugins">
+                                    <ul class="dropdown-menu">
                                         <li><a href="https://www.hcharts.cn/" target="_blank">HighCharts</a></li>
                                         <li><a href="http://echarts.baidu.com/" target="_blank">ECharts</a></li>
                                         <li><a href="https://d3js.org/" target="_blank">D3.js</a></li>
                                         <li class="divider" role="seperator"></li>
                                         <li><a href="https://fineuploader.com/" target="_blank">FineUploader</a></li>
+                                        <li><a href="https://github.com/CrawlScript/WebCollectore" target="_blank">WebCollector</a></li>
                                     </ul>
                                 </li>  
-                                <li class="dropdown-submenu">
+                                <li class="dropdown-submenu" aria-labelledby="community">
                                     <a href="javascript:;">Community</a>  
-                                    <ul class="dropdown-menu" aria-labelledby="community">
+                                    <ul class="dropdown-menu">
                                         <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
                                         <li><a href="https://www.w3cvip.org/" target="_blank">w3cvip</a></li>
-                                        <li><a href="https://www.cnblogs.com/" target="_blank">博客园</a></li>
-
-<!--                                         <li class="dropdown-submenu">  
-                                            <a href="javascript:;">二级菜单</a>  
-                                            <ul class="dropdown-menu">  
-                                                <li class="dropdown-submenu">
-                                                    <a href="javascript:;">三级菜单</a>
-                                                     <ul class="dropdown-menu">  
-                                                        <li><a href="javascript:;">四级菜单</a></li>  
-                                                     </ul> 
-                                                </li>  
-                                            </ul>  
-                                        </li>   -->
+                                        <li><a href="http://www.cnblogs.com/joyZzzzz/" target="_blank">博客园</a></li>
                                     </ul>  
                                 </li>  
                             </ul>  
@@ -97,7 +81,7 @@
                     <!-- Search -->
                     <form id="search-form" class="navbar-form navbar-left" role="search">
                         <div class="input-group">
-                            <input type="text" title="Enter your search term" class="form-control" placeholder="Search">
+                            <input type="text" title="Enter your search term" data-placement="left" class="form-control" placeholder="Search">
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">Go!</button>
                             </span>
@@ -114,7 +98,7 @@
         <div class="content-wrapper content-flex">
             <div id="myInfo" class="doc-floater">
                 <ul>
-                    <li><img class="my-ico circle border-brown evenflow_spin" src="/img/my_ico_384.jpg" alt="my_ico.jpg"></li>
+                    <li><a href="/"><img class="my-ico circle border-brown evenflow_spin" src="/img/my_ico_384.jpg" alt="my_ico.jpg"></a></li>
                     <li>{{name}}</li>
                     <li><span class="glyphicon glyphicon-envelope"></span> {{email}}</li>
                     <li><span class="glyphicon glyphicon-earphone"></span> {{tel}}</li>
