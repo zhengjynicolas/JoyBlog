@@ -30,13 +30,7 @@
                     <ul class="nav navbar-nav">
                         <!-- Normal bootstrap dropdown menu -->
                         <li id="resume" class="dropdown">
-                            <a class="glyphicon glyphicon-file dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resume</a>
-                            <ul class="dropdown-menu" aria-labelledby="resume">
-                                <li><a href="#education">教育背景</a></li>
-                                <li><a href="#workExp">工作经历</a></li>
-                                <li><a href="#pjExp">项目经验</a></li>
-                                <li><a href="#identification">资格证书</a></li>
-                            </ul>
+                            <a href="/joy_blog.html" class="glyphicon glyphicon-file dropdown-toggle">Resume</a>
                         </li>
                         <!-- Extended bootstrap multiple level dropdown menu -->
                         <li class="dropdown">
@@ -98,65 +92,7 @@
                 <!-- /.navbar-collapse -->
             </div>
         </nav>
-        <div class="content-wrapper content-flex">
-            <div id="myInfo" class="doc-floater">
-                <ul>
-                    <li><a href="/"><img class="my-ico circle border-brown evenflow_spin" src="/img/my_ico_384.jpg" alt="my_ico.jpg"></a></li>
-                    <li>{{name}}</li>
-                    <li><span class="glyphicon glyphicon-envelope"></span> {{email}}</li>
-                    <li><span class="glyphicon glyphicon-earphone"></span> {{tel}}</li>
-                </ul>
-            </div>
-            <div id="resumeInfo" class="doc-section">
-                <section id="education">
-                    <h1>{{title}}</h1>
-                    <h2>{{university}} | {{dep}} | {{cate}}</h2>
-                </section>
-                <section id="workExp">
-                    <h1>{{title}}</h1>
-                    <div v-for="data in datas">
-                        <h2>{{data.start}} ~ {{data.end}}  {{data.corp}}</h2>
-                        <p>职务：{{data.title}}</p>
-                        <p v-if="data.project !== undefined">项目：{{data.project}}</p>
-                        <p>职责：
-                            <div>
-                                <ul>
-                                    <li v-for="resp in data.response">{{resp.headline}}
-                                        <ol>
-                                            <li v-for="dtl in resp.detail">{{dtl}}</li>
-                                        </ol>
-                                    </li>
-                                </ul>
-                            </div>
-                        </p>
-                    </div>
-                </section>
-                <section id="pjExp">
-                    <h1>{{title}}</h1>
-                    <div v-for="data in datas">
-                        <h2>{{data.name}}</h2>
-                        <ul>
-                            <li>程序语言：{{data.lang}}</li>
-                            <li>相关技术：{{data.tech}}</li>
-                            <li>开发环境：{{data.env}}</li>
-                            <li>开发工具：{{data.soft}}</li>
-                            <li>软件描述：{{data.desc}}</li>
-                            <li v-if="data.rewards !== undefined">项目业绩：{{data.rewards}}</li>
-                        </ul>
-                    </div>
-                </section>
-                <section id="identification">
-                    <h1>{{title}}</h1>
-                    <ol>
-                        <li v-for="data in datas">{{data}}</li>
-                    </ol>
-                </section>
-                <section id="addition">
-                    <h1>{{title}}</h1>
-                    <p v-for="data in datas">{{data}}</p>
-                </section>
-            </div>
-        </div>
+
         <button class="back-to-top"><span></span></button>
     </div>
     <footer class="main-footer">
@@ -176,7 +112,6 @@
     <script type="text/javascript" src="js/jquery/jquery.animate-colors-min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/vue.js/vue.min.js"></script>
-    <script type="text/javascript" src="src/resumeinfo_load.js"></script>
     <script type="text/javascript" src="src/commonUnit.js"></script>
     <script type="text/javascript" src="src/joy_blog.js"></script>
 </body>

@@ -4,29 +4,6 @@
     var toTop;
     var navBar;
     var win;
-    var jsonData;
-
-    function makeJsonData(json){
-        $.each(json,function(propName, value){
-            return new Vue({
-                el: "#" + propName,
-                data: value
-            });
-        });
-    }
-
-    function loadJsonData(url) {
-        $.ajax({
-            type: "GET",
-            url: url,
-            dataType:"json",
-            async: true,
-            success: function(response){
-                jsonData = response;
-                makeJsonData(jsonData);
-            }
-        });
-    }
 
     function initGlobalVars() {
         bgColorIdx = 0;
@@ -34,7 +11,6 @@
         toTop = $(".back-to-top");
         navBar = $("#naviBar");
         win = $(window);
-        loadJsonData("/json/resume_info.json");
     }
 
     function initDefaultStatus(){
@@ -62,8 +38,8 @@
     function initSearchActivity(){
         $("#search-form button").click(function(){
             var searchInput = $("#search-form input");
-            var searchVal = searchInput.val();
-            if(searchVal === null || searchVal === undefined || searchVal.length === 0){
+            var searchVal = searchInput.val().trim();
+            if(CommonUtil.isEmpty(searchVal)){
                 return;
             }
             window.open("http://cn.bing.com/search?q=" + searchVal, "_top");
