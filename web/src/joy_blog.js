@@ -13,20 +13,20 @@
         win = $(window);
     }
 
-    function initDefaultStatus(){
+    function initDefaultStatus() {
         win.ready(function() {
-            if(win.scrollTop() === 0){
+            if (win.scrollTop() === 0) {
                 toTop.hide();
             }
         });
     }
 
     function initNavScrollEvent() {
-        win.scroll(function(){
+        win.scroll(function() {
             var css = {};
-            if(win.scrollTop() > 0){
+            if (win.scrollTop() > 0) {
                 toTop.fadeIn();
-            }else{
+            } else {
                 toTop.fadeOut();
             }
         });
@@ -35,15 +35,27 @@
         });
     }
 
-    function initSearchActivity(){
-        $("#search-form button").click(function(){
+    function initSearchActivity() {
+        $("#search-form button").click(triggerSearch());
+        $("#search-form input").keydown(function(evt) {
+            switch (evt.keyCode) {
+                case 13:
+                    //Enter
+                    triggerSearch();
+                    break;
+                default:
+                    break;
+            }
+        });
+
+        function triggerSearch() {
             var searchInput = $("#search-form input");
             var searchVal = searchInput.val().trim();
-            if(CommonUtil.isEmpty(searchVal)){
+            if (CommonUtil.isEmpty(searchVal)) {
                 return;
             }
             window.open("http://cn.bing.com/search?q=" + searchVal, "_top");
-        });
+        }
     }
 
     function addListeners() {
@@ -58,17 +70,18 @@
         }
         css.backgroundColor = colorList[bgColorIdx];
         bgColorIdx++;
-        setTimeout(function(){
+        setTimeout(function() {
             $(".doc-floater").animate(css, 5000, initColorChangeAnimation(css));
-        },10000);
+        }, 10000);
     }
-    function initBgPics(){
-       var picList = [
+
+    function initBgPics() {
+        var picList = [
             'bg_cc.jpg',
             'bg_cc_lulu.jpg',
-            'bg_sesyoumaru.jpg', 
-            'bg_fuuma_kamui.jpg', 
-            'bg_lulu.jpg', 
+            'bg_sesyoumaru.jpg',
+            'bg_fuuma_kamui.jpg',
+            'bg_lulu.jpg',
             'bg_suzaku.jpg',
             'bg_384.jpg',
             'bg_suzaku.jpg',

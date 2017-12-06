@@ -54,9 +54,9 @@ CommonUtil = {
      */
     isEmpty : function(value){
         if(value == null || value === '' ||
-           (isArray(value) && value.length === 0) ||
-           (isObject(value) && Object.keys(value).length === 0 ||
-           (isString(value)) && value === '')){
+           (this.isArray(value) && value.length === 0) ||
+           (this.isObject(value) && Object.keys(value).length === 0 ||
+           (this.isString(value)) && value === '')){
             return true;
         }
         return false;
