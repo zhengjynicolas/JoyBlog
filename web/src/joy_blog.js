@@ -36,8 +36,8 @@
     }
 
     function initSearchActivity() {
-        $("#search-form button").click(triggerSearch());
-        $("#search-form input").keydown(function(evt) {
+        $(".nav-search button").click(triggerSearch);
+        $(".nav-search input").keydown(function(evt) {
             switch (evt.keyCode) {
                 case 13:
                     //Enter
@@ -49,7 +49,7 @@
         });
 
         function triggerSearch() {
-            var searchInput = $("#search-form input");
+            var searchInput = $(".nav-search input");
             var searchVal = searchInput.val().trim();
             if (CommonUtil.isEmpty(searchVal)) {
                 return;

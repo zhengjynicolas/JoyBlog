@@ -50,6 +50,9 @@ canvas {
 #myInfo {
   text-align: center;
 }
+.nav-search {
+  padding: 10px;
+}
 @media (min-width: 1280px) {
   .doc-section {
     width: 70%;
