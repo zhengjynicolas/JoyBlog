@@ -104,9 +104,11 @@
                     <li>
                         <article class="log-paragraph article-shadow-border">
                             <h1>{{data.title}}</h1>
-                            <time>Posted @ {{data.timestamp}}</time>
                             <p>{{data.text}}</p>
-                            <div><a href="javascript:;">see more</a></div>
+                            <time>Posted @ {{data.timestamp}}</time>
+                            <div>
+                                <a v-bind:href="data.more">see more</a>
+                            </div>
                         </article>
                     </li>
                 </ul>

@@ -5,27 +5,32 @@
         {
             "timestamp": "2017/11/11",
             "title": "JavaScript中new操作都干了些什么？",
-            "text": "Log Records No.1 Blah Blah Blah Blah Blah Blah Blah."
+            "text": "JavaScript中的操作符new与其他面向对象语言中的new机制完全不同。 首先，在JavaScript中并没有所谓的“构造函数”，因为在JavaScrpit中没有类（class）的机制， 即使是被new调用的Function也不属于任何类，他们只是一些普通函数而已。 所以，在JavaScrip...",
+            "more": "xxx.html"
         },
         {
             "timestamp": "2017/10/12",
             "title": "JS编码函数escape(),encodeURI() 和 encodeURIComponent()",
-            "text": "Log Records No.2 Blah Blah Blah Blah Blah Blah Blah."
+            "text": "escape(),encodeURI() 和 encodeURIComponent()的基本功能都是把 URI 非法字符转化成合法字符，即对字符串进行编码。 以上三者解码的函数为unescape(),decodeURI和 decodeURIComponent()...",
+            "more": "xxx.html"
         },
         {
             "timestamp": "2017/9/28",
             "title": "HTTP状态码",
-            "text": "Log Records No.3 Blah Blah Blah Blah Blah Blah Blah."
+            "text": "当浏览者访问一个网页时，浏览者的浏览器会向网页所在服务器发出请求。当浏览器接收并显示网页前，此网页所在的服务器会返回一个包含HTTP状态码的信息头（server header）用以响应浏览器的请求...",
+            "more": "xxx.html"
         },
         {
             "timestamp": "2017/9/19",
             "title": "二分查找（折半查找）",
-            "text": "Log Records No.4 Blah Blah Blah Blah Blah Blah Blah."
+            "text": "基本思想： 1）二分查找的前提是在有序元素列中进行查询，所以取元素列中间的元素array[mid]与要查找的元素比较。 2）如果查找的元素比中间位小（or大），则在中间位的左（or右）半段查找。 3）循环步骤1直到元素列头部与尾部重合 代码实现： 时间复杂度：O(logn) 空间复杂度：递归O...",
+            "more": "xxx.html"
         },
         {
             "timestamp": "2017/8/14",
             "title": "快速排序",
-            "text": "Log Records No.5 Blah Blah Blah Blah Blah Blah Blah."
+            "text": "基本思想： 1）在R[low..high]中任选一个记录作为基准(Pivot)。 2）以此基准将当前无序区划分为左、右两个较小的子区间R[low..pivotPos-1)和R[pivotPos+1..high]，并使左边子区间中所有记录的关键字均小于等于基准记录(不妨记为pivot)的关键字...",
+            "more": "xxx.html"
         }
         ],
         "maxRecordNum": 5

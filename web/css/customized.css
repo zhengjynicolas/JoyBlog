@@ -46,10 +46,7 @@ canvas {
   padding-bottom: 80px;
   width: 100%;
 }
-.log-content{
-  margin: 0 auto;
-  width: 50%;
-}
+
 .log-paragraph{
   width: 100%;
   padding: 20px;
@@ -61,12 +58,14 @@ canvas {
   text-align: right;
 }
 .log-paragraph h1{
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .content-wrapper ul{
   list-style-type: none;
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .doc-floater ul {
@@ -83,6 +82,10 @@ canvas {
   padding: 10px;
 }
 @media (min-width: 1280px) {
+  .log-content{
+    margin: 0 auto;
+    width: 50%;
+  }
   .doc-section {
     width: 70%;
   }
@@ -107,6 +110,10 @@ canvas {
 
 }
 @media (max-width: 1280px) {
+  .log-content{
+    margin: 0 auto;
+    width: 100%;
+  }
   .doc-section {
     width: 90%;
   }
