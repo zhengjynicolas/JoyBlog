@@ -2,19 +2,16 @@
     var uploader = new qq.FineUploader({
         element: $("#uploader")[0],
         request: {
-            endpoint: '../../uploads'
+            endpoint: 'server/nodejs.js'
         },
         deleteFile: {
             enabled: true,
-            endpoint: '../../uploads'
+            endpoint: 'server/nodejs.js'
         },
         chunking: {
             enabled: true,
             concurrent: {
                 enabled: true
-            },
-            success: {
-                endpoint: "?"
             }
         },
         resume: {

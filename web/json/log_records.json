@@ -1,0 +1,33 @@
+{
+    "logRecords":
+    {
+        "records": [
+        {
+            "timestamp": "2017/11/11",
+            "title": "JavaScript中new操作都干了些什么？",
+            "text": "Log Records No.1 Blah Blah Blah Blah Blah Blah Blah."
+        },
+        {
+            "timestamp": "2017/10/12",
+            "title": "JS编码函数escape(),encodeURI() 和 encodeURIComponent()",
+            "text": "Log Records No.2 Blah Blah Blah Blah Blah Blah Blah."
+        },
+        {
+            "timestamp": "2017/9/28",
+            "title": "HTTP状态码",
+            "text": "Log Records No.3 Blah Blah Blah Blah Blah Blah Blah."
+        },
+        {
+            "timestamp": "2017/9/19",
+            "title": "二分查找（折半查找）",
+            "text": "Log Records No.4 Blah Blah Blah Blah Blah Blah Blah."
+        },
+        {
+            "timestamp": "2017/8/14",
+            "title": "快速排序",
+            "text": "Log Records No.5 Blah Blah Blah Blah Blah Blah Blah."
+        }
+        ],
+        "maxRecordNum": 5
+    }
+}

@@ -6,7 +6,28 @@ CustomizeUtil = {
             bgPic = 'bg_default.jpg';
         }
         jqObj.css({ "background-image": "url(/img/" + bgPic + ")" });
-	}
+	},
+    makeVueData : function(json){
+        $.each(json,function(propName, value){
+            return new Vue({
+                el: "#" + propName,
+                data: value
+            });
+        });
+    },
+    loadJsonData : function(url) {
+        var scope = this;
+        $.ajax({
+            me: scope,
+            type: "GET",
+            url: url,
+            dataType:"json",
+            async: true,
+            success: function(response){
+                this.me.makeVueData(response);
+            }
+        });
+    }
 }
 CommonUtil = {
     /**
