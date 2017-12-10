@@ -81,13 +81,28 @@ canvas {
 .nav-search {
   padding: 10px;
 }
+.log-content{
+  margin: 0 auto;
+}
+
+@media (max-width: 767px){
+  .log-content{
+    width: 100%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1280px){
+  .log-content{
+    width: 90%;
+  }
+}
+
 @media (min-width: 1280px) {
   .log-content{
-    margin: 0 auto;
     width: 50%;
   }
   .doc-section {
-    width: 70%;
+    width: 80%;
   }
   .doc-floater {
     position: fixed;
@@ -109,11 +124,8 @@ canvas {
   }
 
 }
+
 @media (max-width: 1280px) {
-  .log-content{
-    margin: 0 auto;
-    width: 100%;
-  }
   .doc-section {
     width: 90%;
   }
